@@ -1,0 +1,77 @@
+:root {
+    --color-blue: #3e999f;
+    --color-blue2: #4271ae;
+    
+    --color-grey1: #4d4d4c;
+    --color-grey2: #666969;
+    --color-grey3: #999999;
+    --color-grey4: #aeafad;
+    --color-grey5: #d1d1d1;
+    --color-grey6: #d6d6d6;
+    --color-orange: #f5871f;
+    --color-orange2: #c99e00;
+    --color-purple: #8959a8;
+    --color-red: #c82829;
+    --color-white: #ffffff;
+    --color-white2: #efefef;
+    --color-yellow: #718c00;
+  }
+
+#layout {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    
+    background-color: var(--color-white);
+
+}
+#toggle-hidden-button {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--color-red)
+}
+#toggle-hidden-button.hidden {
+    left: 0%;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+#toggle-hidden-button.not-hidden {
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    left: 10%;
+}
+#navbar {
+    float: left;
+    width: 10%;
+    height: 100%;
+    
+   
+    background-color: var(--color-blue);
+    
+
+}
+#navbar.not-hidden{
+    margin-left: 0%;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+#navbar.hidden {
+    margin-left: -10%;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+
+}
+#main-window {
+    padding-top:25px;
+    flex-direction: row;
+    flex-grow: 1;
+    
+    height: 100%;
+    
+    
+    overflow: hidden;
+    
+    background-color: var(--color-grey2);
+}
